@@ -1,6 +1,8 @@
 package com.route.newappc35fri.model
 
 import com.google.gson.annotations.SerializedName
+import java.text.SimpleDateFormat
+import java.util.*
 
 data class NewsResponse(
 
@@ -36,4 +38,13 @@ data class ArticlesItem(
 
     @field:SerializedName("content")
     val content: String? = null
-)
+) {
+
+    fun formatDate(): String {
+        return publishedAt ?: "";
+//        val inputFormatter = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ",Locale.ENGLISH);
+//        val date = inputFormatter.parse(publishedAt);
+//        val outputFormatter = SimpleDateFormat("MMM dd hh:mm a", Locale.getDefault());
+//        return outputFormatter.format(date);
+    }
+}

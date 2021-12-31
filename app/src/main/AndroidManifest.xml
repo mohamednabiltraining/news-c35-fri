@@ -12,7 +12,7 @@
         android:theme="@style/Theme.NewAppC35Fri"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".HomeActivity"
+            android:name=".ui.home.HomeActivity"
             android:exported="true"
             android:label="@string/title_activity_home"
             android:theme="@style/Theme.NewAppC35Fri.NoActionBar">

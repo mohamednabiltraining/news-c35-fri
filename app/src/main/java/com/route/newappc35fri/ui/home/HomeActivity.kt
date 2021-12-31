@@ -1,24 +1,16 @@
-package com.route.newappc35fri
+package com.route.newappc35fri.ui.home
 
 import android.os.Bundle
-import android.view.Menu
 import android.view.View
 import android.widget.ImageView
-import com.google.android.material.snackbar.Snackbar
-import com.google.android.material.navigation.NavigationView
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.appbar.AppBarLayout
-import com.route.newappc35fri.databinding.ActivityHomeBinding
-import com.route.newappc35fri.ui.CategoriesFragment
-import com.route.newappc35fri.ui.Category
-import com.route.newappc35fri.ui.NewsFragment
+import com.route.newappc35fri.R
+import com.route.newappc35fri.ui.categories.CategoriesFragment
+import com.route.newappc35fri.ui.categories.Category
+import com.route.newappc35fri.ui.news.NewsFragment
 import com.route.newappc35fri.ui.SettingsFragment
 
 class HomeActivity : AppCompatActivity() {

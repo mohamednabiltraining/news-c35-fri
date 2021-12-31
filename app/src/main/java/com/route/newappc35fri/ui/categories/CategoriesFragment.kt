@@ -1,4 +1,4 @@
-package com.route.newappc35fri.ui
+package com.route.newappc35fri.ui.categories
 
 import android.os.Bundle
 import android.view.LayoutInflater

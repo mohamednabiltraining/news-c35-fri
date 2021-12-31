@@ -1,6 +1,5 @@
-package com.route.newappc35fri.ui
+package com.route.newappc35fri.ui.categories
 
-import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
