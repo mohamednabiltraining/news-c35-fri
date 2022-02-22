@@ -1,31 +1,23 @@
 package com.route.newappc35fri.ui.news
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ProgressBar
-import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.tabs.TabLayout
-import com.route.newappc35fri.Constants
 import com.route.newappc35fri.R
-import com.route.newappc35fri.api.ApiManager
 import com.route.newappc35fri.databinding.FragmentNewsBinding
-import com.route.newappc35fri.model.NewsResponse
 import com.route.newappc35fri.model.SourcesItem
-import com.route.newappc35fri.model.SourcesResponse
 import com.route.newappc35fri.ui.categories.Category
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class NewsFragment : Fragment() {
 
     companion object {
@@ -36,8 +28,12 @@ class NewsFragment : Fragment() {
         }
     }
 
+    @Inject
+    lateinit var adapter: NewsAdapter
+
     lateinit var category: Category
     lateinit var viewDataBinding: FragmentNewsBinding
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -52,7 +48,6 @@ class NewsFragment : Fragment() {
     }
 
     lateinit var viewModel: NewsViewModel
-    val adapter = NewsAdapter()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initView();

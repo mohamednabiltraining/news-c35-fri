@@ -12,7 +12,9 @@ import com.route.newappc35fri.ui.categories.CategoriesFragment
 import com.route.newappc35fri.ui.categories.Category
 import com.route.newappc35fri.ui.news.NewsFragment
 import com.route.newappc35fri.ui.SettingsFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeActivity : AppCompatActivity() {
 
     val categoriesFragment = CategoriesFragment();
